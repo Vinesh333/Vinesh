@@ -1,0 +1,49 @@
+abstract class Animal {
+ 
+    // declare data member
+    String objectName = " ";
+ 
+    //constructor
+    Animal(String name) {
+        objectName = name;
+        System.out.print(name + "Animal created ");
+    }
+ 
+    //constructor
+    Animal() {
+        System.out.println("Animal created ");
+    }
+ 
+    // normal method
+    public void sleep() {
+        System.out.println("Animal sleeping time");
+    }
+ 
+    // normal method
+    public void eat() {
+        System.out.println("Animal eat something");
+    }
+ 
+    // Abstract method
+    public abstract void makeNoise();
+}
+ 
+class Dog extends Animal {
+ 
+    Dog (String name){
+        super(name);
+    }
+    public void makeNoise() {
+        System.out.println("Bark! Bark!");
+    }
+}
+ 
+class Cow extends Animal {
+    Cow (String name){
+        super(name);
+    }
+    public void makeNoise() {
+        System.out.println("Moo! Moo!");
+    }
+ 
+}
