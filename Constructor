@@ -1,0 +1,19 @@
+abstract class Abscls{ 
+    Abscls() { System.out.println("Base Constructor Called"); } 
+    abstract void fun(); 
+    void norm() { System.out.println("normal function called"); } 
+}
+
+
+class A extends Abscls { 
+    A() { System.out.println("Derived Constructor Called"); } 
+    void fun() { System.out.println("Derived fun() called"); }
+} 
+public class Main { 
+    public static void main(String args[]) { 
+    A obj1 = new A();
+    A obj2 = new A();
+    obj1.fun();
+    obj2.norm();
+    }
+    }
